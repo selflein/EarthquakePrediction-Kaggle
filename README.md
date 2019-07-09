@@ -7,4 +7,16 @@ This repo contains some code, mostly utilities, and some models as I was not rea
 Contains some data visualization and submitting notebook. Some really interesting can be found in the kaggle kernels in this visualization regarding time series features, e.g., [this kernel](https://www.kaggle.com/michael422/spectrogram-convolution) using spectral features.
 
 ### `earthquake_prediction` folder
-Contains dataset and utility functions in seperate files and the PyTorch models in the `experiments` subfolder. 
+Contains dataset and utility functions in seperate files and the PyTorch models in the `experiments` subfolder.
+
+## Setup
+Install requirements with conda
+ ```
+ conda env create --name earthquake_prediction -f environment.yml 
+ conda activate earthquake_prediction
+ ```
+Run an experiment from the `experiments` folder by executing from the repository root
+```
+python -m earthquake_prediction.experiments.cnn_regressor --name test --num_epochs 20
+```
+where `--name` determines the identifier for the logging file.
